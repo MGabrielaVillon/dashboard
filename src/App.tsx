@@ -2,6 +2,8 @@ import { Grid } from '@mui/material';
 
 import './App.css'
 
+import HeaderUI from './components/HeaderUI';
+
 /*
 function App() {
   const [count, setCount] = useState(0)
@@ -126,7 +128,10 @@ function App() {
         <Grid container spacing={5} sx={{ justifyContent: "left", alignItems: "center" }}>
 
          {/* Encabezado */}
-         <Grid size={{ xs: 12, md: 12 }}>Elemento: Encabezado</Grid>
+         <Grid size={{ xs: 12, md: 12 }}>
+          Elemento: Encabezado
+            <HeaderUI/>
+          </Grid>
 
          {/* Alertas */}
          <Grid size={12}>Elemento: Alertas</Grid>
