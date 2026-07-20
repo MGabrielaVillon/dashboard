@@ -45,3 +45,4 @@ export interface Hourly {
   apparent_temperature: number[]
   wind_speed_10m: number[]
 }
+

@@ -12,6 +12,9 @@ import IndicatorUI from './components/IndicatorUI';
 
 import useFetchData from './hooks/useFetchData';
 
+import TableUI from './components/TableUI';
+
+import ChartUI from './components/ChartUI';
 /*
 function App() {
   const [count, setCount] = useState(0)
@@ -211,6 +214,7 @@ function App() {
       <Grid
         sx={{ display: { xs: "none", md: "block" } }} >
         Elemento: Gráfico
+        <ChartUI />
 
 
       </Grid>
@@ -219,6 +223,8 @@ function App() {
       <Grid
         sx={{ display: { xs: "none", md: "block" } }}>
         Elemento: Tabla
+        <TableUI />
+
       </Grid>
 
       {/* Información adicional */}
