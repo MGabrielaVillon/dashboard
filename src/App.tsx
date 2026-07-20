@@ -15,6 +15,8 @@ import useFetchData from './hooks/useFetchData';
 import TableUI from './components/TableUI';
 
 import ChartUI from './components/ChartUI';
+
+import { useState } from 'react';
 /*
 function App() {
   const [count, setCount] = useState(0)
@@ -135,8 +137,11 @@ function App() {
 
 function App() {
 
-  const dataFetcherOutput = useFetchData();
+  // Utilice una variable de estado para almacenar la opción seleccionada por el usuario
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
+  // Comunique la opción seleccionada al hook useFetchData
+  const dataFetcherOutput = useFetchData(selectedOption);
   return (
     <Grid container spacing={5} sx={{ justifyContent: "left", alignItems: "center" }}>
 
@@ -156,8 +161,7 @@ function App() {
 
       {/* Selector */}
       <Grid size={{ xs: 12, md: 3 }}>
-        <SelectorUI />
-
+        <SelectorUI onOptionSelect={setSelectedOption} />
       </Grid>
 
 
@@ -228,7 +232,7 @@ function App() {
       </Grid>
 
       {/* Información adicional */}
-      <Grid>Elemento: Información adicional</Grid>
+      {/* <Grid>Elemento: Información adicional</Grid>*/}
 
     </Grid>
 
